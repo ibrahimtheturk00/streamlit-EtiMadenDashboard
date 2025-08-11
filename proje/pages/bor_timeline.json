@@ -1,0 +1,176 @@
+{
+  "title": {
+    "text": {
+      "headline": "Bor Sektörü Tarihi ve Gelişmeleri",
+      "text": "Türkiye ve dünyada bor madenciliği, yatırımlar ve stratejik olaylar"
+    },
+    "media": {
+  "url": "https://images-of-elements.com/boron.jpg"
+},
+    "background": {
+      "color": "#0d0f16"
+    }
+  },
+  "events": [
+    {
+      "start_date": { "year": "1935" },
+      "text": {
+        "headline": "Etibank Kuruldu",
+        "text": "Türkiye'de kamu eliyle madencilik faaliyetlerinin başlangıcı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "1950" },
+      "text": {
+        "headline": "Kolemanit Keşfi",
+        "text": "Balıkesir'de yüksek saflıkta kolemanit rezervleri bulundu."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "1964" },
+      "text": {
+        "headline": "Bandırma Tesisi Açıldı",
+        "text": "Türkiye'nin ilk bor rafinerisi olan Bandırma Tesisi hizmete girdi."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "1970" },
+      "text": {
+        "headline": "Kırka Bor İşletmesi Kuruldu",
+        "text": "Dünyanın en büyük tincal üretim tesisi Eskişehir Kırka'da kuruldu."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "1978" },
+      "text": {
+        "headline": "Bor İhracatında Yüzde 80 Artış",
+        "text": "Avrupa ve Japonya pazarlarına büyük çapta bor sevkiyatı yapıldı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "1983" },
+      "text": {
+        "headline": "Etibank Özelleştirildi",
+        "text": "Etibank, kamu teşekkülü yapısından farklılaşarak yeniden yapılandı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "1994" },
+      "text": {
+        "headline": "Bor Araştırma Enstitüsü Kuruldu",
+        "text": "Borun bilimsel ve teknolojik yönlerine yönelik AR-GE merkezi açıldı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2001" },
+      "text": {
+        "headline": "Eti Maden Adı Benimsendi",
+        "text": "Etibank'tan ayrılarak yeni kamu kurumu olarak Eti Maden kuruldu."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2003" },
+      "text": {
+        "headline": "Bor Satışlarında Yüzde 25 Artış",
+        "text": "Çin ve Hindistan'a ihracat patlaması yaşandı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2007" },
+      "text": {
+        "headline": "Borik Asit Tesisleri Devreye Girdi",
+        "text": "Yüksek saflıkta borik asit üretimi başladı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2010" },
+      "text": {
+        "headline": "Bor Teknoloji Platformu Kuruldu",
+        "text": "Sanayi ve akademi iş birliğiyle bor odaklı yenilikler hedeflendi."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2012" },
+      "text": {
+        "headline": "Bor Tabanlı Cam Yatırımı",
+        "text": "Bor katkılı cam üretimi için kamu destekli tesis kuruldu."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2014" },
+      "text": {
+        "headline": "ABD ile Teknoloji İşbirliği",
+        "text": "Enerji verimli bor ürünleri için Ar-Ge projeleri başlatıldı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2017" },
+      "text": {
+        "headline": "Bor Gübreleri Tanıtıldı",
+        "text": "Zirai kullanım için bor içerikli gübreler piyasaya sunuldu."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2018" },
+      "text": {
+        "headline": "Bor Karbür Testleri Başladı",
+        "text": "Askeri amaçlı bor karbür zırh testlerinde başarı elde edildi."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2020" },
+      "text": {
+        "headline": "Covid Döneminde Temizlik Ürünü",
+        "text": "BORON temizlik ürünü piyasaya sürüldü ve büyük talep gördü."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2021" },
+      "text": {
+        "headline": "BORTAM Açıldı",
+        "text": "Bor Ürünleri Test ve Uygulama Merkezi, Balıkesir’de açıldı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2022" },
+      "text": {
+        "headline": "Bor Karbür Tesisi Üretime Başladı",
+        "text": "Bandırma’da katma değerli bor-karbür üretimi resmen başladı."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2024" },
+      "text": {
+        "headline": "Çin Bor Vergisini Artırdı",
+        "text": "2024'te Çin, bor ithalatına %30 vergi koyarak küresel piyasayı etkiledi."
+      },
+      "background": { "color": "#0d0f16" }
+    },
+    {
+      "start_date": { "year": "2025" },
+      "text": {
+        "headline": "Türkiye, Bor Rezervinde %73'e Sahip",
+        "text": "Dünya rezervinin %73'üne sahip olan Türkiye, lider konumunu güçlendirdi."
+      },
+      "background": { "color": "#0d0f16" }
+    }
+  ]
+}
