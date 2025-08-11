@@ -3,7 +3,6 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 import numpy as np
-import pycountry
 import streamlit as st
 import random
 import json
@@ -107,8 +106,6 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Sekmeleri oluştur
-tabs = st.tabs(["Bor Türleri Sektör Bazlı Sorgulama", "Dünya İhracat Haritası"])
-with tabs[0]:
     st.markdown(f"""
     <style>
     .section-header {{
@@ -212,141 +209,3 @@ with tabs[0]:
                     st.warning("Veri bulunamadı.")
             else:
                 st.warning("Soru içinde bor türü ve yıl belirtmelisiniz.")
-
-with tabs[1]:
-        st.markdown(f"""
-    <style>
-    .section-header {{
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }}
-    .section-header h200 {{
-        font-size: 32px;
-        font-weight: 1000;
-        background: linear-gradient(90deg, #474747, #89898f, #cdcdd4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 0;
-        white-space: nowrap;
-        letter-spacing: 1px;
-        transition: transform 0.3s ease, letter-spacing 0.3s ease, text-shadow 0.3s ease;
-        text-shadow: none;
-    }}
-    .section-header:hover h200 {{
-        transform: scale(1.03);
-        letter-spacing: 2px;
-        text-shadow: 0 0 8px rgba(184, 184, 191, 0.6),
-                     0 0 16px rgba(184, 184, 191, 0.4);
-    }}
-    .section-header .line {{
-        flex-grow: 1;
-        height: 3px;
-        background: linear-gradient(90deg, #9a9aa0, #b8b8bf, #d6d6dc);
-        border-radius: 5px;
-        margin-left: 20px;
-    }}
-    </style>
-    <div class="section-header">
-        <h200>Dünya İhracat Haritası</h200>
-        <div class="line"></div>
-    </div>
-    """, unsafe_allow_html=True)
-        countries = [
-    'United States', 'Canada', 'Brazil', 'Argentina', 'Mexico',
-    'Germany', 'France', 'United Kingdom', 'Italy', 'Spain',
-    'Russia', 'Ukraine', 'Poland', 'Sweden', 'Norway',
-    'Finland', 'Denmark', 'Netherlands', 'Belgium', 'Switzerland',
-    'India', 'China', 'Japan', 'South Korea', 'Indonesia',
-    'Saudi Arabia', 'United Arab Emirates', 'South Africa', 'Egypt', 'Nigeria',
-    'Australia', 'New Zealand', 'Thailand', 'Vietnam', 'Malaysia',
-    'Colombia', 'Chile', 'Peru', 'Venezuela', 'Ecuador',
-    'Iran', 'Iraq', 'Pakistan', 'Bangladesh', 'Philippines',
-    'Morocco', 'Algeria', 'Greece', 'Portugal', 'Czechia'
-]
-
-# Sahte ihracat değerleri üret (örnek amaçlı)
-        exports = [random.randint(10, 300) for _ in countries]
-
-# DataFrame oluştur
-        df = pd.DataFrame({
-    "Ülke": countries,
-    "İhracat": exports
-})
-
-# ISO A3 kodlarını eklemek için ülke adlarını kodlara çevireceğiz
-
-        def get_iso_a3(country_name):
-            try:
-                return pycountry.countries.lookup(country_name).alpha_3
-            except LookupError:
-                return None  # Bulunamayan ülkelere None döner
-
-        df["ISO_A3"] = df["Ülke"].apply(get_iso_a3)
-
-# None olanları filtrele
-        df = df.dropna(subset=["ISO_A3"])
-
-# Sahte veri
-        values = np.random.randint(10, 100, size=len(countries))
-
-        custom_data = ["Ülke", "İhracat"]
-
-        fig = px.choropleth(
-    df,
-    locations="ISO_A3",
-    color="İhracat",
-    hover_name="Ülke",
-    projection="orthographic",
-    color_continuous_scale="blues",
-    custom_data=custom_data
-)
-
-        fig.update_geos(
-    showcoastlines=True,
-    showland=True,
-    projection_type="orthographic",
-    landcolor="rgb(30,30,30)",
-    oceancolor="#02031a",     # OKYANUSUN RENGİ DEĞİŞTİRİLDİ
-    showocean=True,
-    bgcolor="#0d0f16"         # ARKA PLAN RENGİ
-)
-
-        fig.update_layout(
-    paper_bgcolor="#0d0f16",
-    height=500,  # sayfadaki harita yüksekliği
-    plot_bgcolor="#0d0f16",
-    font=dict(color='white'),
-    geo=dict(
-        showframe=False,
-        showcoastlines=True,
-    ),
-    coloraxis_colorbar=dict(
-        title=dict(
-            text="Değer",
-            font=dict(color='white', size=14)
-        ),
-        tickfont=dict(color='white'),
-        bgcolor='#02031a'
-    )
-)
-        fig.update_traces(
-    hovertemplate="<b>%{customdata[0]}</b><br>İhracat Değeri: %{customdata[1]} M$<extra></extra>"
-)
-        st.plotly_chart(fig, use_container_width=True)
-# Otomatik yenileme (her 1 saniyede bir)
-        st.info("""
-**Küresel Bor İhracat Dağılımı Haritası**
-
-Bu harita, dünya genelinde bor ihracatının ülkelere göre dağılımını görselleştirmektedir. 
-Renk skalası, daha yüksek ihracat değerlerini koyu mavi tonlarında; daha düşük değerleri ise açık mavi olarak yansıtır.
-
-🔹 Özellikle **Orta Doğu**, **Asya** ve **Avrupa** bölgelerinde dikkat çeken bir yoğunluk gözlemlenmektedir.  
-🔹 **Türkiye'nin** merkezde yer alması, bor sevkiyatında stratejik bir konumda olduğunu gösterir.  
-🔹 **Gelişmiş sanayi ülkeleri** (örneğin Almanya, Çin, Güney Kore) yüksek ithalat potansiyeli ile ön plana çıkmaktadır.  
-🔹 Bazı Afrika ve Güney Amerika ülkelerinde ise düşük veya sıfır sevkiyat dikkati çekmektedir.
-
-Bu görselleştirme, bor ihracat stratejilerinin küresel ölçekte değerlendirilmesi için güçlü bir içgörü sağlar.
-""")
-
-        st.markdown("---")
