@@ -6,7 +6,7 @@ pycountry
 random
 time
 feedparser
-streamlit_timeline
+streamlit-timeline
 streamlit_lottie
 prophet
 pydeck
