@@ -6,7 +6,6 @@ import numpy as np
 import streamlit as st
 import random
 import json
-from streamlit_timeline import timeline
 
 st.set_page_config()
 # Logo ve üst açıklama
@@ -210,3 +209,4 @@ if st.button("Sorgula"):
                 st.warning("Veri bulunamadı.")
         else:
             st.warning("Soru içinde bor türü ve yıl belirtmelisiniz.")
+
