@@ -210,3 +210,4 @@ if st.button("Sorgula"):
         else:
             st.warning("Soru içinde bor türü ve yıl belirtmelisiniz.")
 
+
